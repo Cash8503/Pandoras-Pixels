@@ -1,6 +1,13 @@
 package net.cash.pandoraspixels;
 
 import com.mojang.logging.LogUtils;
+import net.cash.pandoraspixels.entity.ModEntities;
+import net.cash.pandoraspixels.entity.client.ViperwolfRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,13 +23,13 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(PandorasPixels.MOD_ID)
 public class PandorasPixels {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "pandoraspixels";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public PandorasPixels() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -51,7 +58,7 @@ public class PandorasPixels {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.VIPERWOLF.get(), ViperwolfRenderer::new);
         }
     }
 }
