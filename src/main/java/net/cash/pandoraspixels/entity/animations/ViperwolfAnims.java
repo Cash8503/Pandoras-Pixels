@@ -2,7 +2,7 @@ package net.cash.pandoraspixels.entity.animations;// Save this class in your mod
 
 import net.minecraft.client.animation.*;
 
-public class ModAnimationDefinitions {
+public class ViperwolfAnims {
 	public static final AnimationDefinition Viperwolf_Run = AnimationDefinition.Builder.withLength(0.75F).looping()
 		.addAnimation("frontlegright", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)

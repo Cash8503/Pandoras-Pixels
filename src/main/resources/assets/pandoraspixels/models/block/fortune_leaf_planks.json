@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures":{
+    "all": "pandoraspixels:block/fortune_leaf_planks"
+  }
+}

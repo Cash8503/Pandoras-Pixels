@@ -16,7 +16,11 @@ public class ViperwolfRenderer extends MobRenderer<ViperwolfEntity, ViperwolfMod
 
     @Override
     public ResourceLocation getTextureLocation(ViperwolfEntity viperwolfEntity) {
-        return new ResourceLocation(PandorasPixels.MOD_ID, "textures/entity/viperwolf.png");
+        if (viperwolfEntity.isBaby()) {
+            return new ResourceLocation(PandorasPixels.MOD_ID, "textures/entity/viperwolf_baby.png"); }
+        else {
+            return new ResourceLocation(PandorasPixels.MOD_ID, "textures/entity/viperwolf.png");
+        }
     }
 
     @Override

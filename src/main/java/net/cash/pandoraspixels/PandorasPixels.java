@@ -1,8 +1,13 @@
 package net.cash.pandoraspixels;
 
 import com.mojang.logging.LogUtils;
+import net.cash.pandoraspixels.block.ModBlocks;
 import net.cash.pandoraspixels.entity.ModEntities;
+import net.cash.pandoraspixels.entity.client.DirehorseRenderer;
+import net.cash.pandoraspixels.entity.client.HexapedeRenderer;
 import net.cash.pandoraspixels.entity.client.ViperwolfRenderer;
+import net.cash.pandoraspixels.item.ModCreativeModeTabs;
+import net.cash.pandoraspixels.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +34,11 @@ public class PandorasPixels {
     public PandorasPixels() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -44,7 +54,11 @@ public class PandorasPixels {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.VIPERWOLF_SPAWN_EGG);
+            event.accept(ModItems.HEXAPEDE_SPAWN_EGG);
+            event.accept(ModItems.DIREHORSE_SPAWN_EGG);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -59,6 +73,8 @@ public class PandorasPixels {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.VIPERWOLF.get(), ViperwolfRenderer::new);
+            EntityRenderers.register(ModEntities.HEXAPEDE.get(), HexapedeRenderer::new);
+            EntityRenderers.register(ModEntities.DIREHORSE.get(), DirehorseRenderer::new);
         }
     }
 }

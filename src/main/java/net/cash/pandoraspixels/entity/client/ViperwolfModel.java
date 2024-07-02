@@ -4,7 +4,7 @@ package net.cash.pandoraspixels.entity.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.cash.pandoraspixels.entity.custom.ViperwolfEntity;
-import net.cash.pandoraspixels.entity.animations.ModAnimationDefinitions;
+import net.cash.pandoraspixels.entity.animations.ViperwolfAnims;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -266,8 +266,8 @@ public class ViperwolfModel<T extends Entity> extends HierarchicalModel<T> {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModAnimationDefinitions.Viperwolf_Run, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(((ViperwolfEntity) entity).idleAnimationState, ModAnimationDefinitions.Viperwolf_Idle, ageInTicks, 1f);
+		this.animateWalk(ViperwolfAnims.Viperwolf_Run, limbSwing, limbSwingAmount, 2f, 2.5f);
+		this.animate(((ViperwolfEntity) entity).idleAnimationState, ViperwolfAnims.Viperwolf_Idle, ageInTicks, .5f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

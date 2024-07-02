@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "pandoraspixels:block/stripped_crimson_log_top",
+    "side": "pandoraspixels:block/stripped_crimson_log_side"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "block.pandoraspixels.crimson_log": "Crimson Log",
+  "block.pandoraspixels.crimson_wood": "Crimson Wood",
+  "block.pandoraspixels.stripped_crimson_log": "Stripped Crimson Log",
+  "block.pandoraspixels.stripped_crimson_wood": "Stripped Crimson Wood",
+  "block.pandoraspixels.crimson_planks": "Crimson Planks",
+  "block.pandoraspixels.crimson_leaves": "Crimson Leaves",
+
+  "block.pandoraspixels.fortune_leaf_log": "Fortune Leaf Log",
+  "block.pandoraspixels.fortune_leaf_wood": "Fortune Leaf Wood",
+  "block.pandoraspixels.stripped_fortune_leaf_log": "Stripped Fortune Leaf Log",
+  "block.pandoraspixels.stripped_fortune_leaf_wood": "Stripped Fortune Leaf Wood",
+  "block.pandoraspixels.fortune_leaf_planks": "Fortune Leaf Planks",
+  "block.pandoraspixels.fortune_leaf_leaves": "Fortune Leaf Leaves",
+
+  "block.pandoraspixels.shade_leaf_log": "Shade Leaf Log",
+  "block.pandoraspixels.shade_leaf_wood": "Shade Leaf Wood",
+  "block.pandoraspixels.stripped_shade_leaf_log": "Stripped Shade Leaf Log",
+  "block.pandoraspixels.stripped_shade_leaf_wood": "Stripped Shade Leaf Wood",
+  "block.pandoraspixels.shade_leaf_planks": "Shade Leaf Planks",
+  "block.pandoraspixels.shade_leaf_leaves": "Shade Leaf Leaves",
+
+  "entity.pandoraspixels.viperwolf": "Viperwolf",
+  "entity.pandoraspixels.hexapede": "Hexapede",
+  "entity.pandoraspixels.direhorse": "Direhorse",
+
+  "item.pandoraspixels.viperwolf_spawn_egg": "Viperwolf Spawn Egg",
+  "item.pandoraspixels.hexapede_spawn_egg": "Hexapede Spawn Egg",
+  "item.pandoraspixels.direhorse_spawn_egg": "Direhorse Spawn Egg",
+
+  "creativetab.pandora_tab": "Pandora's Pixels"
+}

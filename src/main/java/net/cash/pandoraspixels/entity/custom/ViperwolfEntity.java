@@ -64,15 +64,14 @@ public class ViperwolfEntity extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.ACACIA_BOAT), false));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1d));
+        this.goalSelector.addGoal(1, new BreedGoal(this, 1d));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.of(Items.ACACIA_BOAT), false));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1d));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1d));
-        this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, 0.5F));
-        this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1d));
+        this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, 0.5F));
+        this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0, true));
+        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1d));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers()); // Adjusted index for prioritization
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Sheep.class, true)); // Add sheep as a target
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Chicken.class, true)); // Add chickens as a target
@@ -80,9 +79,9 @@ public class ViperwolfEntity extends Animal {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 20D)
+                .add(Attributes.MAX_HEALTH, 15D)
                 .add(Attributes.FOLLOW_RANGE, 24d)
-                .add(Attributes.MOVEMENT_SPEED, .4D)
+                .add(Attributes.MOVEMENT_SPEED, 0.3D)
                 .add(Attributes.ATTACK_DAMAGE, 2.5f)
                 .add(Attributes.ATTACK_KNOCKBACK, 1f);
     }

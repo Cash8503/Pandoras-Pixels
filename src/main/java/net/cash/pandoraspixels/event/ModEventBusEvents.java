@@ -2,6 +2,9 @@ package net.cash.pandoraspixels.event;
 
 import net.cash.pandoraspixels.PandorasPixels;
 import net.cash.pandoraspixels.entity.ModEntities;
+import net.cash.pandoraspixels.entity.client.DirehorseModel;
+import net.cash.pandoraspixels.entity.custom.DirehorseEntity;
+import net.cash.pandoraspixels.entity.custom.HexapedeEntity;
 import net.cash.pandoraspixels.entity.custom.ViperwolfEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,5 +15,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.VIPERWOLF.get(), ViperwolfEntity.createAttributes().build());
+        event.put(ModEntities.HEXAPEDE.get(), HexapedeEntity.createAttributes().build());
+        event.put(ModEntities.DIREHORSE.get(), DirehorseEntity.createAttributes().build());
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures":{
+    "all": "pandoraspixels:block/stripped_shade_leaf_log_side"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures":{
+    "all": "pandoraspixels:block/stripped_crimson_log_side"
+  }
+}
