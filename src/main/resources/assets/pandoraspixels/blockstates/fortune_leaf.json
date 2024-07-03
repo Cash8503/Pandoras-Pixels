@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "pandoraspixels:block/fortune_leaf_north" },
+    "facing=south": { "model": "pandoraspixels:block/fortune_leaf_south" },
+    "facing=west": { "model": "pandoraspixels:block/fortune_leaf_west" },
+    "facing=east": { "model": "pandoraspixels:block/fortune_leaf_east" }
+  }
+}

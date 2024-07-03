@@ -114,6 +114,7 @@ public class DirehorseEntity extends AbstractHorse {
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0, DirehorseEntity.class));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.0));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 0.7));
+        this.goalSelector.addGoal(5, new FollowMobGoal(this,  1.2, 32f, 10f));
         this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
         if (this.canPerformRearing()) {

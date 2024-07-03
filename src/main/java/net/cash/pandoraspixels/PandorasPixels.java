@@ -8,11 +8,9 @@ import net.cash.pandoraspixels.entity.client.HexapedeRenderer;
 import net.cash.pandoraspixels.entity.client.ViperwolfRenderer;
 import net.cash.pandoraspixels.item.ModCreativeModeTabs;
 import net.cash.pandoraspixels.item.ModItems;
-import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.cash.pandoraspixels.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -45,6 +43,8 @@ public class PandorasPixels {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        ModTrunkPlacerTypes.register(modEventBus);
 
     }
 

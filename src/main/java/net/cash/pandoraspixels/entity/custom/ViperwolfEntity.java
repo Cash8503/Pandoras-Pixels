@@ -69,9 +69,9 @@ public class ViperwolfEntity extends Animal {
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1d));
         this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, 0.5F));
         this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1d));
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1d));
+        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers()); // Adjusted index for prioritization
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Sheep.class, true)); // Add sheep as a target
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Chicken.class, true)); // Add chickens as a target

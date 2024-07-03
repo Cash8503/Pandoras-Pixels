@@ -24,8 +24,20 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.CRIMSON_LOG.get().asItem())
                 .add(ModBlocks.CRIMSON_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_CRIMSON_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_CRIMSON_WOOD.get().asItem());
+                .add(ModBlocks.STRIPPED_CRIMSON_WOOD.get().asItem())
+
+                .add(ModBlocks.FORTUNE_LEAF_LOG.get().asItem())
+                .add(ModBlocks.FORTUNE_LEAF_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_FORTUNE_LEAF_WOOD.get().asItem())
+
+                .add(ModBlocks.SHADE_LEAF_LOG.get().asItem())
+                .add(ModBlocks.SHADE_LEAF_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_SHADE_LEAF_WOOD.get().asItem());
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.CRIMSON_PLANKS.get().asItem());
+                .add(ModBlocks.CRIMSON_PLANKS.get().asItem())
+                .add(ModBlocks.FORTUNE_LEAF_PLANKS.get().asItem())
+                .add(ModBlocks.SHADE_LEAF_PLANKS.get().asItem());
     }
 }

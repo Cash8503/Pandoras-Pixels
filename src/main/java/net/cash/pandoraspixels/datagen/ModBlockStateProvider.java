@@ -7,7 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelBuilder;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,15 +19,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.CRIMSON_LOG);
-        blockWithItem(ModBlocks.CRIMSON_WOOD);
-        blockWithItem(ModBlocks.STRIPPED_CRIMSON_LOG);
-        blockWithItem(ModBlocks.STRIPPED_CRIMSON_WOOD);
-        blockWithItem(ModBlocks.CRIMSON_PLANKS);
-        blockWithItem(ModBlocks.CRIMSON_LEAVES);
         logBlock(((RotatedPillarBlock) ModBlocks.CRIMSON_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.CRIMSON_WOOD.get()), blockTexture(ModBlocks.CRIMSON_LOG.get()), blockTexture(ModBlocks.CRIMSON_LOG.get()));
-
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CRIMSON_LOG.get()), blockTexture(ModBlocks.STRIPPED_CRIMSON_LOG.get()),
                 new ResourceLocation(PandorasPixels.MOD_ID, "block/stripped_crimson_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CRIMSON_WOOD.get()), blockTexture(ModBlocks.STRIPPED_CRIMSON_LOG.get()),
@@ -42,8 +34,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.CRIMSON_PLANKS);
 
         leavesBlock(ModBlocks.CRIMSON_LEAVES);
+
+        saplingBlock(ModBlocks.CRIMSON_SAPLING);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.FORTUNE_LEAF_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.FORTUNE_LEAF_WOOD.get()), blockTexture(ModBlocks.FORTUNE_LEAF_LOG.get()), blockTexture(ModBlocks.FORTUNE_LEAF_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get()), blockTexture(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get()),
+                new ResourceLocation(PandorasPixels.MOD_ID, "block/stripped_fortune_leaf_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_FORTUNE_LEAF_WOOD.get()), blockTexture(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get()));
+
+        blockItem(ModBlocks.FORTUNE_LEAF_LOG);
+        blockItem(ModBlocks.FORTUNE_LEAF_WOOD);
+        blockItem(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG);
+        blockItem(ModBlocks.STRIPPED_FORTUNE_LEAF_WOOD);
+
+        blockWithItem(ModBlocks.FORTUNE_LEAF_PLANKS);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.SHADE_LEAF_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.SHADE_LEAF_WOOD.get()), blockTexture(ModBlocks.SHADE_LEAF_LOG.get()), blockTexture(ModBlocks.SHADE_LEAF_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SHADE_LEAF_LOG.get()), blockTexture(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get()),
+                new ResourceLocation(PandorasPixels.MOD_ID, "block/stripped_shade_leaf_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SHADE_LEAF_WOOD.get()), blockTexture(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get()));
+
+        blockItem(ModBlocks.SHADE_LEAF_LOG);
+        blockItem(ModBlocks.SHADE_LEAF_WOOD);
+        blockItem(ModBlocks.STRIPPED_SHADE_LEAF_LOG);
+        blockItem(ModBlocks.STRIPPED_SHADE_LEAF_WOOD);
+
+        blockWithItem(ModBlocks.SHADE_LEAF_PLANKS);
     }
 
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),

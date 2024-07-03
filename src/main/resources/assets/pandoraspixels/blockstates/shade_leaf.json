@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "pandoraspixels:block/shade_leaf_north" },
+    "facing=south": { "model": "pandoraspixels:block/shade_leaf_south" },
+    "facing=west": { "model": "pandoraspixels:block/shade_leaf_west" },
+    "facing=east": { "model": "pandoraspixels:block/shade_leaf_east" }
+  }
+}

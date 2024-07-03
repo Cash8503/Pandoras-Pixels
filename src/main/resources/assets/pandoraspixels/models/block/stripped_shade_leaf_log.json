@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "pandoraspixels:block/stripped_shade_leaf_log_top",
-    "side": "pandoraspixels:block/stripped_shade_leaf_log_side"
-  }
-}

@@ -23,8 +23,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CRIMSON_LOG.get())
                 .add(ModBlocks.CRIMSON_WOOD.get())
                 .add(ModBlocks.STRIPPED_CRIMSON_LOG.get())
-                .add(ModBlocks.STRIPPED_CRIMSON_WOOD.get());
+                .add(ModBlocks.STRIPPED_CRIMSON_WOOD.get())
+
+                .add(ModBlocks.FORTUNE_LEAF_LOG.get())
+                .add(ModBlocks.FORTUNE_LEAF_WOOD.get())
+                .add(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get())
+                .add(ModBlocks.STRIPPED_FORTUNE_LEAF_WOOD.get())
+
+                .add(ModBlocks.SHADE_LEAF_LOG.get())
+                .add(ModBlocks.SHADE_LEAF_WOOD.get())
+                .add(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get())
+                .add(ModBlocks.STRIPPED_SHADE_LEAF_WOOD.get());
+
         this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.CRIMSON_PLANKS.get());
+                .add(ModBlocks.CRIMSON_PLANKS.get())
+                .add(ModBlocks.FORTUNE_LEAF_PLANKS.get())
+                .add(ModBlocks.SHADE_LEAF_PLANKS.get());
     }
 }

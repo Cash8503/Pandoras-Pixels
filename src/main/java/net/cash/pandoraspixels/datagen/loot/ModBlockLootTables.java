@@ -20,11 +20,28 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.CRIMSON_LOG.get());
-        this.dropSelf(ModBlocks.CRIMSON_WOOD.get());
+        this.add(ModBlocks.CRIMSON_WOOD.get(), block -> createSingleItemTable(ModBlocks.CRIMSON_LOG.get()));
         this.dropSelf(ModBlocks.STRIPPED_CRIMSON_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_CRIMSON_WOOD.get());
         this.dropSelf(ModBlocks.CRIMSON_PLANKS.get());
-        this.dropSelf(ModBlocks.CRIMSON_LEAVES.get());
+
+        this.add(ModBlocks.CRIMSON_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRIMSON_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.CRIMSON_SAPLING.get());
+
+        this.dropSelf(ModBlocks.FORTUNE_LEAF_LOG.get());
+        this.dropSelf(ModBlocks.FORTUNE_LEAF_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_FORTUNE_LEAF_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_FORTUNE_LEAF_WOOD.get());
+        this.dropSelf(ModBlocks.FORTUNE_LEAF_PLANKS.get());
+
+        this.dropSelf(ModBlocks.SHADE_LEAF_LOG.get());
+        this.dropSelf(ModBlocks.SHADE_LEAF_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_SHADE_LEAF_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_SHADE_LEAF_WOOD.get());
+        this.dropSelf(ModBlocks.SHADE_LEAF_PLANKS.get());
+
 
     }
 
